@@ -1,7 +1,5 @@
 services:
   - type: web
     name: bin2text-backend
-    env: java
-    buildCommand: javac Backend/BinaryDecoderServer.java
-    startCommand: java Backend.BinaryDecoderServer
+    env: docker
     plan: free
