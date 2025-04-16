@@ -7,7 +7,7 @@ WORKDIR /app
 COPY . .
 
 # Compila todos os arquivos Java do backend
-RUN javac Backend/*.java
+RUN javac Backend/BinaryDecoderServer.java
 
 # Comando para iniciar o servidor
 CMD ["java", "Backend.BinaryDecoderServer"]
