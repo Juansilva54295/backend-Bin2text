@@ -1,14 +1,13 @@
-# Usa imagem do Java
 FROM openjdk:17
 
-# Cria diretório de trabalho
+# Cria diretório de trabalho no container
 WORKDIR /app
 
-# Copia os arquivos
+# Copia todos os arquivos do projeto para o container
 COPY . .
 
-# Compila
-RUN javac Backend/BinaryDecoderServer.java
+# Compila todos os arquivos Java do backend
+RUN javac Backend/*.java
 
-# Roda
+# Comando para iniciar o servidor
 CMD ["java", "Backend.BinaryDecoderServer"]
